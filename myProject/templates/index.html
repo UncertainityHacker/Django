@@ -1,6 +1,7 @@
 <h1>Welcome {{name}}, your age is {{age}} and you are a {{nationality}}</h1>
 <h2>Please enter the text below : </h2>
-<form method="" action="counter">
+<form method="POST" action="counter">
+    {% csrf_token %}
     <textarea name="text" id="" cols="30" rows="10"></textarea>
     <input type="submit">
 </form>
