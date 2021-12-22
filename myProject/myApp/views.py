@@ -21,43 +21,7 @@ from .models import Feature
 # Dynamic data test function
 
 def index(request):
-    feature1 = Feature()
-    feature1.id = 0
-    feature1.name = 'Basic Fitness'
-    feature1.details = 'Getting fit has now become very easy!'
-    feature1.is_true = True
 
-    feature2 = Feature()
-    feature2.id = 1
-    feature2.name = 'New Gym Training'
-    feature2.details = 'Getting fit has now become very easy!'
-    feature2.is_true = False
+    features = Feature.objects.all()
 
-    feature3 = Feature()
-    feature3.id = 2
-    feature3.name = 'Basic Muscle Course'
-    feature3.details = 'Getting fit has now become very easy!'
-    feature3.is_true = False
-    
-    feature4 = Feature()
-    feature4.id = 3
-    feature4.name = 'Advanced Muscle Course'
-    feature4.details = 'Getting fit has now become very easy!'
-    feature4.is_true = False
-
-    feature5 = Feature()
-    feature5.id = 4
-    feature5.name = 'Yoga Training'
-    feature5.details = 'Getting fit has now become very easy!'
-    feature5.is_true = True
-
-    feature6 = Feature()
-    feature6.id = 5
-    feature6.name = 'Body Building Course'
-    feature6.details = 'Getting fit has now become very easy!'
-    feature6.is_true = False
-
-    featuresleft = [feature1, feature2, feature3]
-    featuresright = [feature4, feature5, feature6]
-
-    return render(request, 'index.html', {'featuresleft': featuresleft, 'featuresright': featuresright})
+    return render(request, 'index.html', {'features': features})
