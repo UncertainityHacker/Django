@@ -17,3 +17,6 @@ Create a html in template to show the result, in views.py added the code to do p
 
 ## Using POST method
 By using POST method we are making our website more secure as the strings passed by user in forms is not shown in url, also by default in django csrf token is used which enhances the security
+
+## Admin panel
+Added Feature in admin.py and added data to db using default admin panel of django
